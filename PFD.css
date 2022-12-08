@@ -1,0 +1,39 @@
+.base-container {
+    background-image: url("/Base/RH_PDU.png");
+    width: 800px;
+    height: 800px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.Tickers{
+    position: sticky;
+    width: 511px;
+    height: 295px;
+    top: 23px;
+    left: 281px;
+}
+.artificial-horizon {
+    position: absolute;
+    width: 300px;
+    height: 225px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 62px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.horizon-image {
+    background-image: url("Base/RH_PDU_Horizon_Artificial Horizon.png");
+    width: 1204px;
+    height: 3937px;
+    max-height: 909px;
+    max-width: 100%;
+    position: absolute;
+    bottom: -310px;
+    background-size: cover;
+    transform: translateY(0px);
+}
