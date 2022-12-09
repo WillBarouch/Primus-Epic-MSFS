@@ -3,14 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="PFD-Avionics.js"></script>
+    <script>var exports = {};</script>
+    <script type="module" src="Avionics-Init.js"></script>
+    <script type="module" src="PFD-Avionics.js"></script>
     <link rel="stylesheet" href="PFD.css">
 </head>
 <body>
 <div class="base-container">
-    <div class="Tickers">
+    <div class="adi-window">
+        <div class="speed-tape-container">
+            <span id="mach"></span>
+            <div class="speed-tape">
+                <span id="tas"></span>
+                <div class="tas-ind"></div>
+                <div id="speed-bug"></div>
+            </div>
+        </div>
         <div class="artificial-horizon">
             <div class="horizon-image" id="horizon-image"></div>
+        </div>
+    </div>
+    <div class="hsi-window">
+        <div id="hsi-compass"></div>
+        <div class="hsi-compass-plane"></div>
+        <div class="hsi-top">
+            <span id="hsi-top-hdg"></span>
+        </div>
+        <div class="text-vals">
+            <span id="UTC"></span>
+            <span id="ET"></span>
+            <span id="tastxt"></span>
+            <span id="GS"></span>
+            <span id="TAT"></span>
+            <span id="SAT"></span>
+            <span id="ISA"></span>
+            <div class="fuel">
+            <span id="FQ"></span>
+            <span id="FR"></span>
+            <span id="GW"></span>
+            </div>
+            <button class="hsi-menu">HSI <img class="hsi-menu-triangle" src="Base/Angle.png" alt=""/></button>
+        </div>
+        <div class="radio-menu">
+            <button class="VHF-menu">VHF2<img class="radio-menu-triangle" src="Base/Angle.png" alt=""/></button>
+            <span class="radio-text-large" id="VHFChannel">118.000</span>
+            <span class="radio-text-small" id="VHFSTBYChannel">134.700</span>
+            <button class="NAV-menu">NAV2<img class="radio-menu-triangle" src="Base/Angle.png" alt=""/></button>
+            <div class="radio-submenu1">
+            <span class="radio-text-large" id="NavChannel">118.000</span>
+            <span class="radio-text-small" id="NavSTBYChannel">134.700</span>
+            </div>
         </div>
     </div>
 </div>

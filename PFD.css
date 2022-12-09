@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
 }
 
-.Tickers{
+.adi-window{
     position: sticky;
     width: 511px;
     height: 295px;
@@ -33,7 +33,233 @@
     max-height: 909px;
     max-width: 100%;
     position: absolute;
-    bottom: -310px;
+    bottom: -307px;
+    margin: auto;
     background-size: cover;
     transform: translateY(0px);
+}
+
+.speed-tape-container {
+    position: absolute;
+    width: 70px;
+    height: 225px;
+    left: 25px;
+    top: 62px;
+}
+
+.speed-tape {
+    width: 50px;
+    left: 20px;
+    position: absolute;
+    height: 200px;
+    background-color: #4a4a4a;
+    border: 0.01em solid white;
+}
+
+#mach {
+    font-family: "B612 Mono", sans-serif;
+    font-size: 14px;
+    color: #34c838;
+    left: 29px;
+    position:absolute;
+    top: 210px;
+}
+
+#tas {
+    font-family: "B612 Mono", sans-serif;
+    font-size: 20px;
+    color: #34c838;
+    right: 13px;
+    top: 88px;
+    z-index: 1;
+    position: absolute;
+}
+
+.tas-ind {
+    background-image: url("Base/TAS-Ind.png");
+    width: 55px;
+    height: 29px;
+    right: 1px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    overflow: hidden;
+}
+#speed-bug {
+    background-image: url("Base/Speed-bug-ind.png");
+    width: 11px;
+    height: 28px;
+    margin: auto;
+    top: 0;
+    left: 43px;
+    bottom: 0;
+    position: absolute;
+    transform: translateY(0px);
+}
+
+.hsi-window {
+    position: sticky;
+    width: 511px;
+    height: 290px;
+    top: 314px;
+    left: 281px;
+}
+
+#hsi-compass {
+    background-image: url("Base/HSI.png");
+    width: 189px;
+    height: 196px;
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.hsi-compass-plane {
+    background-image: url("Base/plane-ind.png");
+    width: 25px;
+    height: 27px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.text-vals {
+    height: 167px;
+    width: 50px;
+    position: relative;
+    top: 90px;
+    color: #34c838;
+    font-family: "B612 Mono",sans-serif;
+    left: 22px;
+    font-size: 12.5px;
+    text-align: right;
+}
+
+.text-vals span {
+    display: block;
+}
+
+#ET {
+    color: white;
+}
+
+.fuel {
+    margin-right: 7px;
+}
+
+.hsi-menu {
+    width: 77px;
+    height: 28px;
+    position: absolute;
+    right: -7px;
+    bottom: -28px;
+    border-radius: 0;
+    background-color: #4a4a4a;
+    color: white;
+    font-family: "B612 Mono", sans-serif;
+    text-align: left;
+
+}
+.hsi-menu:hover {
+    background-color: #a7a7a7;
+}
+
+.hsi-menu-triangle {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    left:55px;
+}
+
+.hsi-top {
+    background-image: url("Base/HSI top.png");
+    width: 41px;
+    height: 31px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 220px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#hsi-top-hdg {
+    color: #34c838;
+    font-family: "B612 Mono",sans-serif;
+    position: relative;
+    bottom: 5px;
+    font-size: 14px;
+}
+
+.radio-menu {
+    width: 88px;
+    height: 197px;
+    left: 422px;
+    top: 91px;
+    position: absolute;
+    text-align: right;
+}
+
+.radio-menu button {
+    width: 88px;
+    height: 28px;
+    position: absolute;
+    background-color: #4a4a4a;
+    color: white;
+    margin: auto;
+    left: 0;
+    right: 10px;
+    border: 2px solid #a7a7a7;
+    font-family: "B612 Mono", sans-serif;
+    text-align: center;
+}
+
+.radio-menu button:hover {
+    background-color: #a7a7a7;
+}
+
+.radio-menu-triangle {
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 65px;
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+.radio-text-large {
+    color: #34c838;
+    font-family: "B612 Mono",sans-serif;
+    position: relative;
+    top: 40px;
+    right:5px;
+    font-size: 14px;
+}
+
+.radio-text-small {
+    color: #04e9e6;
+    font-family: "B612 Mono",sans-serif;
+    position: relative;
+    top: 38px;
+    right:5px;
+    font-size: 10px;
+}
+
+.NAV-menu {
+ top:80px ;
+}
+
+.radio-submenu1 {
+    position: absolute;
+    top:82px;
 }
