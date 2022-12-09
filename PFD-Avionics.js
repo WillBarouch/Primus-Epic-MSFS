@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.$ = exports.range = void 0;
+exports.$ = exports.getCurrentUTCTime = exports.sign = exports.range = void 0;
 function range(from, to) {
+    // returns an array of numbers from 'from' to 'to' (inclusive)
     var range = [];
     for (var i = from; i < to + 1; i++) {
         range.push(i);
@@ -18,10 +19,12 @@ function sign(value) {
         return value;
     }
 }
+exports.sign = sign;
 function getCurrentUTCTime() {
     var currentDate = new Date();
     return currentDate.getUTCHours() + ':' + currentDate.getUTCMinutes();
 }
+exports.getCurrentUTCTime = getCurrentUTCTime;
 function $(Id) {
     return document.getElementById(Id);
 }
@@ -58,6 +61,7 @@ function _updateHSI(crsIsOn, crs) {
     _heading = _newHeading;
 }
 function _updateHorizon(pitch) {
+    // Limit the pitch value to the range -30 to 30
     if (pitch in range(-30, 30)) {
         if (pitch < -30) {
             pitch = -30;
@@ -66,14 +70,57 @@ function _updateHorizon(pitch) {
             pitch = 30;
         }
     }
+    // Calculate the total vertical translation needed for the horizon image
     var totalTranslation = 0;
     var _translationFactor = 5.5;
     for (var i = 0; i < Math.abs(pitch); i++) {
         totalTranslation = totalTranslation + _translationFactor;
     }
+    // If the pitch is negative, negate the total translation value
     if (Math.sign(pitch) == -1) {
         totalTranslation = -totalTranslation;
     }
+    // Update the horizon image with the calculated translation
     $("horizon-image").style.transform = "translateY(" + totalTranslation + "px)";
+    // Log the pitch and translation values for debugging purposes
     console.log("pitch " + pitch + " translated to " + totalTranslation);
+}
+$('sixth-menu-button').addEventListener("click", function () {
+    var $6thMenu = $('sixth-menu');
+    if ($6thMenu.style.visibility === 'hidden') {
+        $6thMenu.style.visibility = 'visible';
+    }
+    else {
+        $6thMenu.style.visibility = 'hidden';
+    }
+});
+{
+    var _$eng_1 = $('eng-window');
+    var _$taws_1 = $('taws-window');
+    var _$rad_1 = $('rad-window');
+    var _$sens_1 = $('sens-window');
+    $('s-eng-button').addEventListener("click", function () {
+        _$eng_1.style.visibility = 'visible';
+        _$taws_1.style.visibility = 'hidden';
+        _$rad_1.style.visibility = 'hidden';
+        _$sens_1.style.visibility = 'hidden';
+    });
+    $('s-rad-button').addEventListener("click", function () {
+        _$eng_1.style.visibility = 'hidden';
+        _$taws_1.style.visibility = 'hidden';
+        _$rad_1.style.visibility = 'visible';
+        _$sens_1.style.visibility = 'hidden';
+    });
+    $('s-taws-button').addEventListener("click", function () {
+        _$eng_1.style.visibility = 'hidden';
+        _$taws_1.style.visibility = 'visible';
+        _$rad_1.style.visibility = 'hidden';
+        _$sens_1.style.visibility = 'hidden';
+    });
+    $('s-sens-button').addEventListener("click", function () {
+        _$eng_1.style.visibility = 'hidden';
+        _$taws_1.style.visibility = 'hidden';
+        _$rad_1.style.visibility = 'hidden';
+        _$sens_1.style.visibility = 'visible';
+    });
 }

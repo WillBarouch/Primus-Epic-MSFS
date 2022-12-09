@@ -7,7 +7,7 @@
 }
 
 .adi-window{
-    position: sticky;
+    position: absolute;
     width: 511px;
     height: 295px;
     top: 23px;
@@ -99,7 +99,7 @@
 }
 
 .hsi-window {
-    position: sticky;
+    position: absolute;
     width: 511px;
     height: 290px;
     top: 314px;
@@ -235,6 +235,8 @@
     right: 65px;
     position: absolute;
     transform: rotate(180deg);
+    width: 41px;
+    height: 47.5px;
 }
 
 .radio-text-large {
@@ -257,9 +259,60 @@
 
 .NAV-menu {
  top:80px ;
+    z-index: 5;
 }
 
 .radio-submenu1 {
     position: absolute;
     top:82px;
+}
+
+#sixth-menu-button {
+    bottom: 197px;
+    margin-right: -9.95px;
+    width: 88px;
+  }
+
+.sixth-menu {
+    width: 352px;
+    height: 28px;
+    position: absolute;
+    left: 100px;
+    bottom:2px;
+    visibility: visible;
+    display: flex;
+
+}
+
+.sixth-menu button {
+    width: 80px;
+    height: 28px;
+    background-color: #4a4a4a;
+    color: white;
+    border: 2px solid #a7a7a7;
+    font-family: "B612 Mono", sans-serif;
+    text-align: center !important;
+}
+
+.sixth-menu button:hover {
+    background-color: #a7a7a7;
+}
+.sixth-window {
+    position: absolute;
+    width: 260px;
+    height: 295px;
+    top: 314px;
+    left: 20px;
+
+}
+
+.eng-window {
+    background-image: url("Base/Sixth-ENG.png");
+    width: 250px;
+    height: 267px;
+    background-size: cover;
+    margin: auto;
+    top:15px;
+    position: absolute;
+    visibility: hidden;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>PDU</title>
     <script>var exports = {};</script>
     <script type="module" src="Avionics-Init.js"></script>
     <script type="module" src="PFD-Avionics.js"></script>
@@ -23,6 +23,7 @@
             <div class="horizon-image" id="horizon-image"></div>
         </div>
     </div>
+
     <div class="hsi-window">
         <div id="hsi-compass"></div>
         <div class="hsi-compass-plane"></div>
@@ -44,7 +45,14 @@
             </div>
             <button class="hsi-menu">HSI <img class="hsi-menu-triangle" src="Base/Angle.png" alt=""/></button>
         </div>
+        <div class="sixth-menu" id="sixth-menu">
+            <button id="s-eng-button">ENG</button>
+            <button id="s-radio-button">RAD</button>
+            <button id="s-sens-button">SENS</button>
+            <button id="s-taws-button">TAWS</button>
+        </div>
         <div class="radio-menu">
+            <button id="sixth-menu-button">Menu<img class="radio-menu-triangle" src="Base/Angle.png" alt=""/></button>
             <button class="VHF-menu">VHF2<img class="radio-menu-triangle" src="Base/Angle.png" alt=""/></button>
             <span class="radio-text-large" id="VHFChannel">118.000</span>
             <span class="radio-text-small" id="VHFSTBYChannel">134.700</span>
@@ -54,6 +62,12 @@
             <span class="radio-text-small" id="NavSTBYChannel">134.700</span>
             </div>
         </div>
+    </div>
+    <div class="sixth-window">
+        <div class="eng-window" id="eng-window"></div>
+        <div class="rad-window" id="rad-window"></div>
+        <div class="sens-window" id="sens-window"></div>
+        <div class="taws-window" id="taws-window"></div>
     </div>
 </div>
 
