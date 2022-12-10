@@ -77,6 +77,7 @@
 
 .tas-ind {
     background-image: url("Base/TAS-Ind.png");
+    background-size: cover;
     width: 55px;
     height: 29px;
     right: 1px;
@@ -88,6 +89,7 @@
 }
 #speed-bug {
     background-image: url("Base/Speed-bug-ind.png");
+    background-size: cover;
     width: 11px;
     height: 28px;
     margin: auto;
@@ -129,6 +131,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    background-size: cover;
 }
 
 .text-vals {
@@ -178,11 +181,13 @@
     bottom: 0;
     position: absolute;
     left:55px;
+    width: 11px;
+    height: 13px;
 }
 
 .hsi-top {
     background-image: url("Base/HSI top.png");
-    width: 41px;
+    width: 42px;
     height: 31px;
     margin: auto;
     position: absolute;
@@ -191,6 +196,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    background-size: cover;
 }
 
 #hsi-top-hdg {
@@ -235,8 +241,8 @@
     right: 65px;
     position: absolute;
     transform: rotate(180deg);
-    width: 41px;
-    height: 47.5px;
+    width: 11px;
+    height: 13px;
 }
 
 .radio-text-large {
@@ -279,9 +285,7 @@
     position: absolute;
     left: 100px;
     bottom:2px;
-    visibility: visible;
-    display: flex;
-
+    display: none;
 }
 
 .sixth-menu button {
@@ -314,5 +318,69 @@
     margin: auto;
     top:15px;
     position: absolute;
-    visibility: hidden;
+    display: inline;
+}
+
+.rad-window {
+    background-image: url("Base/Page_RAD.png");
+    width: 248px;
+    height: 235px;
+    background-size: cover;
+    margin: auto;
+    bottom:20px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: none;
+}
+
+.sens-window {
+    display: none;
+}
+
+.taws-window {
+    display: none;
+}
+
+.inopText {
+    color: #34c838;
+    font-family: "B612 Mono", sans-serif;
+    left: 80px;
+    top: 100px;
+    position: absolute;
+}
+
+.text36 {
+    font-size: 36px;
+   }
+
+.radbuts {
+    background-color: #34c838;
+    width: 248px;
+    z-index: 5;
+    height: 30px;
+    display: flex;
+    top: -20px;
+    position: absolute;
+    border: none;
+}
+
+.radbuts button {
+    background-color: #a7a7a7;
+    height: 30px;
+    width: 50px;
+    border-radius: 0px;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: white;
+}
+
+.clicked-radbut {
+    background-color: #4a4a4a !important;
+    border-left: 2px solid #a7a7a7 !important;
+    border-right: 2px solid #a7a7a7 !important;
+    border-top: 2px solid #a7a7a7 !important;
+    color: #34c838 !important;
 }

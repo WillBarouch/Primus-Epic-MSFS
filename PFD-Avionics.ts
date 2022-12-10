@@ -95,10 +95,10 @@ function _updateHorizon(pitch:number) {
 
 $('sixth-menu-button').addEventListener("click", function(){
     const $6thMenu = $('sixth-menu')
-    if ($6thMenu.style.visibility === 'hidden') {
-        $6thMenu.style.visibility = 'visible';
+    if ($6thMenu.style.display === 'none') {
+        $6thMenu.style.display = 'flex';
     } else {
-        $6thMenu.style.visibility = 'hidden';
+        $6thMenu.style.display = 'none';
     }
 })
 {
@@ -107,28 +107,28 @@ $('sixth-menu-button').addEventListener("click", function(){
     const _$rad = $('rad-window');
     const _$sens = $('sens-window');
     $('s-eng-button').addEventListener("click", function () {
-        _$eng.style.visibility = 'visible';
-        _$taws.style.visibility = 'hidden';
-        _$rad.style.visibility = 'hidden';
-        _$sens.style.visibility = 'hidden';
+        _$eng.style.display = 'inline';
+        _$taws.style.display = 'none';
+        _$rad.style.display = 'none';
+        _$sens.style.display = 'none';
     })
-    $('s-rad-button').addEventListener("click", function () {
-        _$eng.style.visibility = 'hidden';
-        _$taws.style.visibility = 'hidden';
-        _$rad.style.visibility = 'visible';
-        _$sens.style.visibility = 'hidden';
+    $('s-radio-button').addEventListener("click", function () {
+        _$eng.style.display = 'none';
+        _$taws.style.display = 'none';
+        _$rad.style.display = 'inline';
+        _$sens.style.display = 'none';
     })
     $('s-taws-button').addEventListener("click", function () {
-        _$eng.style.visibility = 'hidden';
-        _$taws.style.visibility = 'visible';
-        _$rad.style.visibility = 'hidden';
-        _$sens.style.visibility = 'hidden';
+        _$eng.style.display = 'none';
+        _$taws.style.display = 'inline';
+        _$rad.style.display = 'none';
+        _$sens.style.display = 'none';
     })
     $('s-sens-button').addEventListener("click", function () {
-        _$eng.style.visibility = 'hidden';
-        _$taws.style.visibility = 'hidden';
-        _$rad.style.visibility = 'hidden';
-        _$sens.style.visibility = 'visible';
+        _$eng.style.display = 'none';
+        _$taws.style.display = 'none';
+        _$rad.style.display = 'none';
+        _$sens.style.display = 'inline';
     })
 
 }

@@ -87,11 +87,11 @@ function _updateHorizon(pitch) {
 }
 $('sixth-menu-button').addEventListener("click", function () {
     var $6thMenu = $('sixth-menu');
-    if ($6thMenu.style.visibility === 'hidden') {
-        $6thMenu.style.visibility = 'visible';
+    if ($6thMenu.style.display === 'none') {
+        $6thMenu.style.display = 'flex';
     }
     else {
-        $6thMenu.style.visibility = 'hidden';
+        $6thMenu.style.display = 'none';
     }
 });
 {
@@ -100,27 +100,27 @@ $('sixth-menu-button').addEventListener("click", function () {
     var _$rad_1 = $('rad-window');
     var _$sens_1 = $('sens-window');
     $('s-eng-button').addEventListener("click", function () {
-        _$eng_1.style.visibility = 'visible';
-        _$taws_1.style.visibility = 'hidden';
-        _$rad_1.style.visibility = 'hidden';
-        _$sens_1.style.visibility = 'hidden';
+        _$eng_1.style.display = 'inline';
+        _$taws_1.style.display = 'none';
+        _$rad_1.style.display = 'none';
+        _$sens_1.style.display = 'none';
     });
-    $('s-rad-button').addEventListener("click", function () {
-        _$eng_1.style.visibility = 'hidden';
-        _$taws_1.style.visibility = 'hidden';
-        _$rad_1.style.visibility = 'visible';
-        _$sens_1.style.visibility = 'hidden';
+    $('s-radio-button').addEventListener("click", function () {
+        _$eng_1.style.display = 'none';
+        _$taws_1.style.display = 'none';
+        _$rad_1.style.display = 'inline';
+        _$sens_1.style.display = 'none';
     });
     $('s-taws-button').addEventListener("click", function () {
-        _$eng_1.style.visibility = 'hidden';
-        _$taws_1.style.visibility = 'visible';
-        _$rad_1.style.visibility = 'hidden';
-        _$sens_1.style.visibility = 'hidden';
+        _$eng_1.style.display = 'none';
+        _$taws_1.style.display = 'inline';
+        _$rad_1.style.display = 'none';
+        _$sens_1.style.display = 'none';
     });
     $('s-sens-button').addEventListener("click", function () {
-        _$eng_1.style.visibility = 'hidden';
-        _$taws_1.style.visibility = 'hidden';
-        _$rad_1.style.visibility = 'hidden';
-        _$sens_1.style.visibility = 'visible';
+        _$eng_1.style.display = 'none';
+        _$taws_1.style.display = 'none';
+        _$rad_1.style.display = 'none';
+        _$sens_1.style.display = 'inline';
     });
 }
